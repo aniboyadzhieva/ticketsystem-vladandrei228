@@ -7,7 +7,7 @@ namespace UnitTestCarClass
     public class UnitTest1
     {
         [TestMethod]
-        public void TestPrice()
+        public void TestPriceInCar()
         {
             //Arrange
             ClassLibrary.Car car = new ClassLibrary.Car();
@@ -21,7 +21,7 @@ namespace UnitTestCarClass
         }
 
         [TestMethod]
-        public void TestVehicleType()
+        public void TestVehicleTypeInCar()
         {
             //Arrange
             Car car = new Car();
@@ -29,6 +29,34 @@ namespace UnitTestCarClass
             //Act
             var expectedResult = "Car";
             var actualResult = car.VehicleType();
+
+            //Assert
+            Assert.AreEqual(actualResult, expectedResult);
+        }
+
+        [TestMethod]
+        public void TestPriceInMC()
+        {
+            //Assert
+            ClassLibrary.MC mc = new ClassLibrary.MC();
+
+            //Act
+            var expectedPRice = 125;
+            var actualPrice = mc.Price();
+
+            //Assert
+            Assert.AreEqual(actualPrice, expectedPRice);
+        }
+
+        [TestMethod]
+        public void TestVehicleTypeInMC()
+        {
+            //Arrange
+            MC mc = new MC();
+
+            //Act
+            var expectedResult = "MC";
+            var actualResult = mc.Vehicle();
 
             //Assert
             Assert.AreEqual(actualResult, expectedResult);

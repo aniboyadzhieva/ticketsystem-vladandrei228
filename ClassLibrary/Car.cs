@@ -12,7 +12,7 @@ namespace ClassLibrary
             set;
         }
 
-        public DateTime Date;
+        public DateTime Date { get; set; }
 
         public double Price()
         {
