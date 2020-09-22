@@ -6,11 +6,18 @@ namespace ClassLibrary
 {
     public abstract class  Vehicle
     {
-
+        /// <summary>
+        /// Properties
+        /// </summary>
         public DateTime Date { get; set; }
         public bool BroBizz { get; set; }
        public string LicensePlate { get; set; }
 
+       /// <summary>
+       /// LicensePlate lenght check.
+       /// </summary>
+       /// <param name="LP"></param>
+       /// <returns></returns>
        public virtual string LPCheck( string LP)
        {
            var lp = LP;

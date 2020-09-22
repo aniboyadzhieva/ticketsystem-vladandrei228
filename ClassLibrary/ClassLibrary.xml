@@ -28,6 +28,18 @@
             </summary>
             <returns>"MC"</returns>
         </member>
+        <member name="P:ClassLibrary.Vehicle.Date">
+            <summary>
+            Properties
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.Vehicle.LPCheck(System.String)">
+            <summary>
+            LicensePlate lenght check.
+            </summary>
+            <param name="LP"></param>
+            <returns></returns>
+        </member>
         <member name="M:ClassLibrary.Vehicle.#ctor">
             <summary>
             Empty constructor for using it in unit test
