@@ -56,7 +56,7 @@ namespace UnitTestCarClass
 
             //Act
             var expectedResult = "MC";
-            var actualResult = mc.Vehicle();
+            var actualResult = mc.VehicleType();
 
             //Assert
             Assert.AreEqual(actualResult, expectedResult);

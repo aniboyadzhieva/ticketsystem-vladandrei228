@@ -6,20 +6,20 @@ namespace ClassLibrary
 {
     public class Car
     {
-        public string Licenseplate
+        public virtual string Licenseplate
         {
             get;
             set;
         }
 
-        public DateTime Date { get; set; }
+        public virtual DateTime Date { get; set; }
 
-        public double Price()
+        public virtual double Price()
         {
             return 240;
         }
 
-        public string VehicleType()
+        public virtual string VehicleType()
         {
             return "Car";
         }
