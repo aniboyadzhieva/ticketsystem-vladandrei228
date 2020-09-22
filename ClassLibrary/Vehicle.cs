@@ -8,7 +8,7 @@ namespace ClassLibrary
     {
 
         /// <summary>
-        /// instance fields string _liscencePlate, DateTime _date
+        /// instance fields
         /// </summary>
         private string _liscenseplate;
         private DateTime _date;
@@ -21,13 +21,15 @@ namespace ClassLibrary
         /// </summary>
         /// <param name="LiscencePlate"> Lenght not more then 7 characters else exception</param>
         /// <param name="Date"></param>
+        /// <param name ="BroBizz">type booleon</para>
+        /// <param name="ActualPrice">type double</param>
         public Vehicle(string LiscencePlate, DateTime Date, bool BroBizz, double ActualPrice)
         {
             _brooBizz = BroBizz;
             _date = Date;
             _liscenseplate = LiscencePlate;
-            if (LiscencePlate.Length > 7)
-                throw new ArgumentException("Wrong format");
+            //if (LiscencePlate.Length > 7)
+            //    throw new ArgumentException("Wrong format");
             _actualPrice = ActualPrice;
 
         }
@@ -35,25 +37,19 @@ namespace ClassLibrary
         {
             _discountPrice = DiscountPrice;
         }
-
+        /// <summary>
+        /// Empty constructor for using it in unit test
+        /// </summary>
         public Vehicle()
         {
 
         }
 
-
-
         /// <summary>
-        /// public properties LiscencePlate, Date 
+        /// properties
         /// </summary>
         public string LiscencePlate { get; set; }
-       /// <summary>
-       /// public property Date
-       /// </summary>
         public string Date { get; set; }
-        /// <summary>
-        /// public int  property Discount
-        /// </summary>
         public double DiscountPrice
         {
             
@@ -66,27 +62,21 @@ namespace ClassLibrary
             }
         }
 
-        /// <summary>
-        /// Public bool property BroBizz
-        /// </summary>
         public bool BroBizz { get; set; }
         public double ActualPrice { get; set; }
+
         /// <summary>
-        /// Virtual method double Price 
+        /// Virtual method for Price 
         /// </summary>
         /// <returns> if brobizz = true DiscountPrice </returns>
         public virtual double Price()
         {
-            
-                return ActualPrice - DiscountPrice;
-         }  
-        
-       
+            return ActualPrice - DiscountPrice;
+        }
 
         /// <summary>
-        /// Abstract method string VehiculeType
+        /// VehiculeType method
         /// </summary>
-        /// <returns></returns>
         public abstract string VehiculeType();
 
        
