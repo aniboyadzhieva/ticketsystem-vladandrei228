@@ -1,3 +1,4 @@
+using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ClassLibrary;
 
@@ -7,59 +8,78 @@ namespace UnitTestCarClass
     public class UnitTest1
     {
         [TestMethod]
-        public void TestPriceInCar()
+        public void TestPriceCarMethod()
         {
-            //Arrange
-            ClassLibrary.Car car = new ClassLibrary.Car();
-
-            //Act
-            var expectedPrice = 240;
-            var actualPrice = car.Price();
-
-            //Assert
-            Assert.AreEqual(actualPrice, expectedPrice);
+            
+            double ActualPrice = 240;
+            Car c = new Car();
+            double thePrice = c.Price();
+            Assert.AreEqual(240, thePrice);
         }
 
         [TestMethod]
-        public void TestVehicleTypeInCar()
+        public void TestVehiculeTypeCarMethod()
         {
-            //Arrange
-            Car car = new Car();
 
-            //Act
-            var expectedResult = "Car";
-            var actualResult = car.VehicleType();
-
-            //Assert
-            Assert.AreEqual(actualResult, expectedResult);
+            
+            Car c = new Car();
+            string theType = c.VehiculeType();
+            Assert.AreEqual("Car", theType);
         }
 
         [TestMethod]
-        public void TestPriceInMC()
+        public void TestPriceMCMethod()
         {
-            //Assert
-            ClassLibrary.MC mc = new ClassLibrary.MC();
-
-            //Act
-            var expectedPRice = 125;
-            var actualPrice = mc.Price();
-
-            //Assert
-            Assert.AreEqual(actualPrice, expectedPRice);
-        }
-
-        [TestMethod]
-        public void TestVehicleTypeInMC()
-        {
-            //Arrange
+           
             MC mc = new MC();
+            double thePrice = mc.Price();
+            Assert.AreEqual(125, thePrice);
+        }
 
-            //Act
-            var expectedResult = "MC";
-            var actualResult = mc.VehicleType();
+        [TestMethod]
+        public void TestVehiculeTypeMCMethod()
+        {
+            
+            MC mc = new MC();
+            string theType = mc.VehiculeType();
+            Assert.AreEqual("MC", theType);
 
-            //Assert
-            Assert.AreEqual(actualResult, expectedResult);
+        }
+
+        [TestMethod]
+        public void LiscenePlateLenghtTest()
+        {
+            string liscencePlate = "ac14369";
+            DateTime date = new DateTime(2020, 8, 14);
+            bool BroBizz = false;
+            double ActualPrice = 125;
+            try
+            {
+                MC mc = new MC(liscencePlate, date, BroBizz, ActualPrice);
+            }
+            catch (ArgumentException)
+            {
+                Assert.Fail();
+            }
+        }
+
+
+        [TestMethod]
+        public void BroBizzPriceTest()
+        {
+            string LiscencePlate = "Ac14369";
+            DateTime Date = new DateTime(2020, 8, 22);
+            bool BroBizz = true;
+            double ActualPrice = 125;
+
+            MC mc = new MC(LiscencePlate, Date, BroBizz, ActualPrice);
+
+
+            double Price = mc.Price();
+
+            Assert.AreEqual(125, Price);
+
+
         }
     }
 }

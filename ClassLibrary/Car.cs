@@ -4,22 +4,42 @@ using System.Text;
 
 namespace ClassLibrary
 {
-    public class Car
+    public class Car : Vehicle
     {
-        public virtual string Licenseplate
+        /// <summary>
+        /// Constructor 
+        /// </summary>
+        /// <param name="LiscencePlate"></param>
+        /// <param name="Date"></param>
+        public Car(string LiscencePlate, DateTime Date, bool BroBizz, double ActualPrice) : base(LiscencePlate, Date, BroBizz, ActualPrice)
         {
-            get;
-            set;
+
         }
 
-        public virtual DateTime Date { get; set; }
-
-        public virtual double Price()
+        public Car() : base()
         {
-            return 240;
+
         }
 
-        public virtual string VehicleType()
+        /// <summary>
+        /// public double  override method Price
+        /// </summary>
+        /// <returns>240</returns>
+        public override double Price()
+        {
+            double ActualPrice = 240;
+            double DiscountPrice = ActualPrice - ActualPrice * 0.05;
+
+            if (BroBizz == true)
+            { return DiscountPrice; }
+            else
+                return ActualPrice;
+        }
+        /// <summary>
+        /// public string  override method VehiculeType 
+        /// </summary>
+        /// <returns>"Car"</returns>
+        public override string VehiculeType()
         {
             return "Car";
         }
