@@ -11,7 +11,7 @@ namespace ClassLibrary
         /// </summary>
         /// <param name="LiscencePlate"></param>
         /// <param name="Date"></param>
-        public Car(string LiscencePlate, DateTime Date, bool BroBizz, double ActualPrice) : base(LiscencePlate, Date, BroBizz, ActualPrice)
+        public Car(string LiscencePlate, DateTime Date, bool BroBizz) : base(LiscencePlate, Date, BroBizz)
         {
 
         }
@@ -27,13 +27,7 @@ namespace ClassLibrary
         /// <returns>240</returns>
         public override double Price()
         {
-            double ActualPrice = 240;
-            double DiscountPrice = ActualPrice - ActualPrice * 0.05;
-
-            if (BroBizz == true)
-            { return DiscountPrice; }
-            else
-                return ActualPrice;
+            return 240;
         }
         /// <summary>
         /// public string  override method VehiculeType 

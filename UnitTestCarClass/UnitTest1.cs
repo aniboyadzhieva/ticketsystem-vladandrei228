@@ -45,41 +45,5 @@ namespace UnitTestCarClass
             Assert.AreEqual("MC", theType);
 
         }
-
-        [TestMethod]
-        public void LiscenePlateLenghtTest()
-        {
-            string liscencePlate = "ac14369";
-            DateTime date = new DateTime(2020, 8, 14);
-            bool BroBizz = false;
-            double ActualPrice = 125;
-            try
-            {
-                MC mc = new MC(liscencePlate, date, BroBizz, ActualPrice);
-            }
-            catch (ArgumentException)
-            {
-                Assert.Fail();
-            }
-        }
-
-
-        [TestMethod]
-        public void BroBizzPriceTest()
-        {
-            string LiscencePlate = "Ac14369";
-            DateTime Date = new DateTime(2020, 8, 22);
-            bool BroBizz = true;
-            double ActualPrice = 125;
-
-            MC mc = new MC(LiscencePlate, Date, BroBizz, ActualPrice);
-
-
-            double Price = mc.Price();
-
-            Assert.AreEqual(125, Price);
-
-
-        }
     }
 }

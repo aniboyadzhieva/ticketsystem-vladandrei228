@@ -7,77 +7,67 @@ namespace ClassLibrary
     public abstract class  Vehicle
     {
 
-        /// <summary>
-        /// instance fields
-        /// </summary>
         private string _liscenseplate;
-        private DateTime _date;
-        private double _actualPrice;
-        private bool _brooBizz;
-        private double _discountPrice;
+
+        public DateTime Date { get; set; }
+
+       public bool BroBizz { get; set; }
        
         /// <summary>
         /// public constructor 
         /// </summary>
-        /// <param name="LiscencePlate"> Lenght not more then 7 characters else exception</param>
-        /// <param name="Date"></param>
-        /// <param name ="BroBizz">type booleon</para>
-        /// <param name="ActualPrice">type double</param>
-        public Vehicle(string LiscencePlate, DateTime Date, bool BroBizz, double ActualPrice)
+        public Vehicle(string liscencePlate, DateTime date, bool broBizz)
         {
-            _brooBizz = BroBizz;
-            _date = Date;
-            _liscenseplate = LiscencePlate;
-            //if (LiscencePlate.Length > 7)
-            //    throw new ArgumentException("Wrong format");
-            _actualPrice = ActualPrice;
+            LicensePlate = liscencePlate;
+            BroBizz = broBizz;
+            Date = date;
 
-        }
-        public Vehicle( double DiscountPrice)
-        {
-            _discountPrice = DiscountPrice;
         }
         /// <summary>
         /// Empty constructor for using it in unit test
         /// </summary>
         public Vehicle()
         {
-
         }
 
-        /// <summary>
-        /// properties
-        /// </summary>
-        public string LiscencePlate { get; set; }
-        public string Date { get; set; }
-        public double DiscountPrice
+        public string LicensePlate
         {
-            
-            get { return _discountPrice; }
+            get { return this._liscenseplate; }
             set
             {
-                if (BroBizz == true)
-                    _discountPrice = ActualPrice - ActualPrice * 0.05;
-                else _discountPrice = 0;
+                if (this._liscenseplate.Length > 7)
+                {
+                    throw new ArgumentException("License plate must contain less than 7 characters");
+                    this._liscenseplate = value;
+                }
             }
         }
-
-        public bool BroBizz { get; set; }
-        public double ActualPrice { get; set; }
-
         /// <summary>
         /// Virtual method for Price 
         /// </summary>
         /// <returns> if brobizz = true DiscountPrice </returns>
         public virtual double Price()
         {
-            return ActualPrice - DiscountPrice;
+            return default;
         }
 
         /// <summary>
         /// VehiculeType method
         /// </summary>
         public abstract string VehiculeType();
+
+        /// <summary>
+        /// Brobizz parking discount
+        /// </summary>
+        public virtual double BrobizzDisc()
+        {
+            if (BroBizz == true)
+            {
+                return Price() * 0.95;
+            }
+
+            return Price();
+        }
 
        
        

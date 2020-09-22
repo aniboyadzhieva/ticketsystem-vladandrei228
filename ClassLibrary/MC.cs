@@ -12,7 +12,7 @@ namespace ClassLibrary
         /// </summary>
         /// <param name="LiscencePlate"></param>
         /// <param name="Date"></param>
-        public MC(string LiscencePlate, DateTime Date, bool BroBizz, double ActualPrice) : base(LiscencePlate, Date, BroBizz, ActualPrice)
+        public MC(string LiscencePlate, DateTime Date, bool BroBizz) : base(LiscencePlate, Date, BroBizz)
         {
 
         }
@@ -28,8 +28,7 @@ namespace ClassLibrary
         /// <returns>125- discount</returns>
         public override double Price()
         {
-
-            return 125 - DiscountPrice;
+            return 125;
         }
         /// <summary>
         /// public override string method VehiculeType  

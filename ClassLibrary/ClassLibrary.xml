@@ -4,7 +4,7 @@
         <name>ClassLibrary</name>
     </assembly>
     <members>
-        <member name="M:ClassLibrary.Car.#ctor(System.String,System.DateTime,System.Boolean,System.Double)">
+        <member name="M:ClassLibrary.Car.#ctor(System.String,System.DateTime,System.Boolean)">
             <summary>
             Constructor 
             </summary>
@@ -23,7 +23,7 @@
             </summary>
             <returns>"Car"</returns>
         </member>
-        <member name="M:ClassLibrary.MC.#ctor(System.String,System.DateTime,System.Boolean,System.Double)">
+        <member name="M:ClassLibrary.MC.#ctor(System.String,System.DateTime,System.Boolean)">
             <summary>
             Constructor 
             </summary>
@@ -42,20 +42,14 @@
             </summary>
             <returns>"MC"</returns>
         </member>
-        <member name="F:ClassLibrary.Vehicle._liscenseplate">
+        <member name="M:ClassLibrary.Vehicle.#ctor(System.String,System.DateTime,System.Boolean)">
             <summary>
-            instance fields
+            public constructor 
             </summary>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:ClassLibrary.Vehicle.#ctor(System.String,System.DateTime,System.Boolean,System.Double)" -->
         <member name="M:ClassLibrary.Vehicle.#ctor">
             <summary>
             Empty constructor for using it in unit test
-            </summary>
-        </member>
-        <member name="P:ClassLibrary.Vehicle.LiscencePlate">
-            <summary>
-            properties
             </summary>
         </member>
         <member name="M:ClassLibrary.Vehicle.Price">
