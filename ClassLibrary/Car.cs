@@ -6,15 +6,6 @@ namespace ClassLibrary
 {
     public class Car : Vehicle
     {
-        /// <summary>
-        /// Constructor 
-        /// </summary>
-        /// <param name="LiscencePlate"></param>
-        /// <param name="Date"></param>
-        public Car(string LiscencePlate, DateTime Date, bool BroBizz) : base(LiscencePlate, Date, BroBizz)
-        {
-
-        }
 
         public Car() : base()
         {

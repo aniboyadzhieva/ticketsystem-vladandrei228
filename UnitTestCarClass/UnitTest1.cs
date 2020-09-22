@@ -45,5 +45,38 @@ namespace UnitTestCarClass
             Assert.AreEqual("MC", theType);
 
         }
+
+        [TestMethod]
+        public void TestLP()
+        {
+            Car car = new Car();
+            string lp = car.LPCheck("CM12345");
+            Assert.AreEqual("CM12345", lp);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void TestLPException()
+        {
+            MC mtb = new MC();
+            string lp = mtb.LPCheck("12345678");
+            Assert.Fail();
+        }
+
+        [TestMethod]
+        public void TestDiscBrobizTrue()
+        {
+            Car car = new Car();
+            double brochck = car.BrobizzDisc(true);
+            Assert.AreEqual(228, brochck);
+        }
+
+        [TestMethod]
+        public void TestDiscBrobizFalse()
+        {
+            MC mtb = new MC();
+            double tst = mtb.BrobizzDisc(false);
+            Assert.AreEqual(125,tst);
+        }
     }
 }

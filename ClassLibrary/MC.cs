@@ -6,17 +6,6 @@ namespace ClassLibrary
 {
     public class MC : Vehicle
     {
-
-        /// <summary>
-        /// Constructor 
-        /// </summary>
-        /// <param name="LiscencePlate"></param>
-        /// <param name="Date"></param>
-        public MC(string LiscencePlate, DateTime Date, bool BroBizz) : base(LiscencePlate, Date, BroBizz)
-        {
-
-        }
-
         public MC() : base()
         {
 

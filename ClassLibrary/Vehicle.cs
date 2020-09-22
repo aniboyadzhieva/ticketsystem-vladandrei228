@@ -7,22 +7,22 @@ namespace ClassLibrary
     public abstract class  Vehicle
     {
 
-        private string _liscenseplate;
-
         public DateTime Date { get; set; }
+        public bool BroBizz { get; set; }
+       public string LicensePlate { get; set; }
 
-       public bool BroBizz { get; set; }
+       public virtual string LPCheck( string LP)
+       {
+           var lp = LP;
+           if (lp.Length > 7)
+           {
+               throw new ArgumentException("I am sorry, but your LP must contain maximum 7 characters");
+           }
+
+           return lp;
+       }
        
-        /// <summary>
-        /// public constructor 
-        /// </summary>
-        public Vehicle(string liscencePlate, DateTime date, bool broBizz)
-        {
-            LicensePlate = liscencePlate;
-            BroBizz = broBizz;
-            Date = date;
-
-        }
+       
         /// <summary>
         /// Empty constructor for using it in unit test
         /// </summary>
@@ -30,18 +30,7 @@ namespace ClassLibrary
         {
         }
 
-        public string LicensePlate
-        {
-            get { return this._liscenseplate; }
-            set
-            {
-                if (this._liscenseplate.Length > 7)
-                {
-                    throw new ArgumentException("License plate must contain less than 7 characters");
-                    this._liscenseplate = value;
-                }
-            }
-        }
+       
         /// <summary>
         /// Virtual method for Price 
         /// </summary>
@@ -59,14 +48,13 @@ namespace ClassLibrary
         /// <summary>
         /// Brobizz parking discount
         /// </summary>
-        public virtual double BrobizzDisc()
+        public virtual double BrobizzDisc(bool bro)
         {
-            if (BroBizz == true)
+            bool brodisc = bro;
+            if (brodisc == true)
             {
                 return Price() * 0.95;
-            }
-
-            return Price();
+            } return Price();
         }
 
        

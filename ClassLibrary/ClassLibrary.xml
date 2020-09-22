@@ -4,13 +4,6 @@
         <name>ClassLibrary</name>
     </assembly>
     <members>
-        <member name="M:ClassLibrary.Car.#ctor(System.String,System.DateTime,System.Boolean)">
-            <summary>
-            Constructor 
-            </summary>
-            <param name="LiscencePlate"></param>
-            <param name="Date"></param>
-        </member>
         <member name="M:ClassLibrary.Car.Price">
             <summary>
             public double  override method Price
@@ -23,13 +16,6 @@
             </summary>
             <returns>"Car"</returns>
         </member>
-        <member name="M:ClassLibrary.MC.#ctor(System.String,System.DateTime,System.Boolean)">
-            <summary>
-            Constructor 
-            </summary>
-            <param name="LiscencePlate"></param>
-            <param name="Date"></param>
-        </member>
         <member name="M:ClassLibrary.MC.Price">
             <summary>
             public ovveride double method Price 
@@ -41,11 +27,6 @@
             public override string method VehiculeType  
             </summary>
             <returns>"MC"</returns>
-        </member>
-        <member name="M:ClassLibrary.Vehicle.#ctor(System.String,System.DateTime,System.Boolean)">
-            <summary>
-            public constructor 
-            </summary>
         </member>
         <member name="M:ClassLibrary.Vehicle.#ctor">
             <summary>
@@ -61,6 +42,11 @@
         <member name="M:ClassLibrary.Vehicle.VehiculeType">
             <summary>
             VehiculeType method
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.Vehicle.BrobizzDisc(System.Boolean)">
+            <summary>
+            Brobizz parking discount
             </summary>
         </member>
     </members>
