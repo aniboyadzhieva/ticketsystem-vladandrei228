@@ -6,6 +6,10 @@ namespace ClassLibrary
 {
     public class MC : Vehicle
     {
+        public MC(string licensePlate, DateTime dateTime, bool brobizz) : base(licensePlate, dateTime, brobizz)
+        {
+        }
+
         public MC() : base()
         {
 

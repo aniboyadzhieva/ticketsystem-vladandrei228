@@ -18,9 +18,9 @@ namespace ClassLibrary
        /// </summary>
        /// <param name="LP"></param>
        /// <returns></returns>
-       public virtual string LPCheck( string LP)
+       public virtual string LPCheck()
        {
-           var lp = LP;
+           var lp = LicensePlate;
            if (lp.Length > 7)
            {
                throw new ArgumentException("I am sorry, but your LP must contain maximum 7 characters");
@@ -29,7 +29,12 @@ namespace ClassLibrary
            return lp;
        }
        
-       
+       public Vehicle(string licensePlate, DateTime dateTime, bool brobizz)
+        {
+            LicensePlate = licensePlate;
+            Date = dateTime;
+            BroBizz = brobizz;
+        }
         /// <summary>
         /// Empty constructor for using it in unit test
         /// </summary>
@@ -55,9 +60,9 @@ namespace ClassLibrary
         /// <summary>
         /// Brobizz parking discount
         /// </summary>
-        public virtual double BrobizzDisc(bool bro)
+        public virtual double BrobizzDisc()
         {
-            bool brodisc = bro;
+            bool brodisc = BroBizz;
             if (brodisc == true)
             {
                 return Price() * 0.95;

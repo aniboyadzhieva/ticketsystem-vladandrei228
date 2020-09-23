@@ -5,7 +5,11 @@ VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibrary", "ClassLibrary\ClassLibrary.csproj", "{68DCEA9D-2012-4E55-BC6C-7F5B0A18C7D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestCarClass", "UnitTestCarClass\UnitTestCarClass.csproj", "{33E2EDFB-C3DD-40BD-88AA-E2FB65C727FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTestCarClass", "UnitTestCarClass\UnitTestCarClass.csproj", "{33E2EDFB-C3DD-40BD-88AA-E2FB65C727FE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StoreBaeltTicketLibrary", "StoreBaeltTicketLibrary\StoreBaeltTicketLibrary.csproj", "{254F8AEC-23EB-4F54-BE0D-FEC7C6975632}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oresundbron", "Oresundbron\Oresundbron.csproj", "{7E2A86FE-504E-481D-8328-8C5ED74C449E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{33E2EDFB-C3DD-40BD-88AA-E2FB65C727FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33E2EDFB-C3DD-40BD-88AA-E2FB65C727FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33E2EDFB-C3DD-40BD-88AA-E2FB65C727FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{254F8AEC-23EB-4F54-BE0D-FEC7C6975632}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{254F8AEC-23EB-4F54-BE0D-FEC7C6975632}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{254F8AEC-23EB-4F54-BE0D-FEC7C6975632}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{254F8AEC-23EB-4F54-BE0D-FEC7C6975632}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E2A86FE-504E-481D-8328-8C5ED74C449E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E2A86FE-504E-481D-8328-8C5ED74C449E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E2A86FE-504E-481D-8328-8C5ED74C449E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E2A86FE-504E-481D-8328-8C5ED74C449E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

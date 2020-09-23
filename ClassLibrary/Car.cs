@@ -6,7 +6,10 @@ namespace ClassLibrary
 {
     public class Car : Vehicle
     {
+        public Car(string licensePlate, DateTime dateTime, bool brobizz) : base(licensePlate, dateTime, brobizz)
+        {
 
+        }
         public Car() : base()
         {
 

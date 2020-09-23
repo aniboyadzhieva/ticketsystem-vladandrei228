@@ -1,6 +1,7 @@
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ClassLibrary;
+using StoreBaeltTicketLibrary;
 
 namespace UnitTestCarClass
 {
@@ -49,8 +50,8 @@ namespace UnitTestCarClass
         [TestMethod]
         public void TestLP()
         {
-            Car car = new Car();
-            string lp = car.LPCheck("CM12345");
+            Car car = new Car("CM12345", DateTime.Today, true);
+            string lp = car.LPCheck();
             Assert.AreEqual("CM12345", lp);
         }
 
@@ -58,25 +59,28 @@ namespace UnitTestCarClass
         [ExpectedException(typeof(ArgumentException))]
         public void TestLPException()
         {
-            MC mtb = new MC();
-            string lp = mtb.LPCheck("12345678");
+            MC mtb = new MC("MD231452", DateTime.Today, false);
+            string lp = mtb.LPCheck();
             Assert.Fail();
         }
 
         [TestMethod]
         public void TestDiscBrobizTrue()
         {
-            Car car = new Car();
-            double brochck = car.BrobizzDisc(true);
+            Car car = new Car("1234567", DateTime.Today, true);
+            double brochck = car.BrobizzDisc();
             Assert.AreEqual(228, brochck);
         }
 
         [TestMethod]
         public void TestDiscBrobizFalse()
         {
-            MC mtb = new MC();
-            double tst = mtb.BrobizzDisc(false);
+            MC mtb = new MC("1234567", DateTime.Today, false);
+            double tst = mtb.BrobizzDisc();
             Assert.AreEqual(125,tst);
         }
+
+
+
     }
 }
